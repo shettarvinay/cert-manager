@@ -24,7 +24,7 @@ global:
     # Override the namespace used to store the ConfigMap for leader election
     namespace: "kube-system"
 
-installCRDs: false
+installCRDs: true
 
 replicaCount: 1
 
@@ -46,11 +46,11 @@ image:
 
   # Override the image tag to deploy by setting this variable.
   # If no value is set, the chart's appVersion will be used.
-  # tag: canary
+  tag: v1.0.2
 
   # Setting a digest will override any tag
   # digest: sha256:0e072dddd1f7f8fc8909a2ca6f65e76c5f0d2fcfb8be47935ae3457e8bbceb20
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
 
 # Override the namespace used to store DNS provider credentials etc. for ClusterIssuer
 # resources. By default, the same namespace as cert-manager is deployed within is
@@ -246,7 +246,7 @@ webhook:
 
     # Override the image tag to deploy by setting this variable.
     # If no value is set, the chart's appVersion will be used.
-    # tag: canary
+    tag: v1.0.2
 
     # Setting a digest will override any tag
     # digest: sha256:0e072dddd1f7f8fc8909a2ca6f65e76c5f0d2fcfb8be47935ae3457e8bbceb20
@@ -330,7 +330,7 @@ cainjector:
 
     # Override the image tag to deploy by setting this variable.
     # If no value is set, the chart's appVersion will be used.
-    # tag: canary
+    tag: v1.0.2
 
     # Setting a digest will override any tag
     # digest: sha256:0e072dddd1f7f8fc8909a2ca6f65e76c5f0d2fcfb8be47935ae3457e8bbceb20
